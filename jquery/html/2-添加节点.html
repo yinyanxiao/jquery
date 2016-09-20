@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="">
+		<input type="text" id="txt">
+		<input type="button" id="btn" value="添加">
+	</form>
+	<ul id="list">
+		<li>香蕉</li>
+		<li class="apple">苹果</li>
+		<li>鸭梨</li>
+	</ul>	
+	<script src="script/jquery.js"></script>
+	<script>
+		$("#btn").click(function(){
+			var value = $("#txt").val();
+			var li = "<li>" + value + "</li>";
+			$("#list").append(li);/*在li后面添加一条*/
+			$("#list").prepend(li);/*在li前面添加一条*/
+			$(".apple").before(li);
+			$(".apple").after(li);
+		})
+	</script>	
+</body>
+</html>
+	

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			height: 100px;
+			width: 100px;
+			background-color: #f00;
+		}
+		.active{
+			background-color: #00f;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<script src="script/jquery.js"></script>
+	<script>
+		$(".box").mouseenter(function(){
+			$(this).addClass("active");
+		}).mouseleave(function(){
+			$(this).removeClass("active");
+		})
+	</script>
+</body>
+</html>

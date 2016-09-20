@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box div{
+			border:1px solid red;
+			width:100px;
+			height: 100px;
+			float: left;
+			margin-left:10px;
+		}
+	</style>
+</head>
+<body>
+	<form id="myForm" action="">
+		<input type="button" value="1">
+		<input type="button" value="2">
+		<input type="button" value="3">
+	</form>
+	<div class="box">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<script src="script/jquery.js"></script>
+	<script>
+		$("#myForm input").click(function(){
+			var ind = $(this).index();
+			$(".box div").eq(ind).css("background-color","red")
+		})
+	</script>
+</body>
+</html>
